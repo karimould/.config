@@ -138,14 +138,14 @@ Note that,
 #### Keymaps in File Tree (mostly default)
 
 | Key                            | Mode | Action | Note                                                                                             |
-| ------------------------------ | :--: | ------ | ------------------------------------------------------------------------------------------------ | --------------------------------------- | ------- |
+| ------------------------------ | :--: | ------ | ------------------------------------------------------------------------------------------------ |
 | <kbd>Ctrl</kbd> + <kbd>v</kbd> |  N   |        | vsplit open the file in a vertical split                                                         |
 | <kbd>Ctrl</kbd> + <kbd>x</kbd> |  N   |        | split open the file in a horizontal split                                                        |
 | <kbd>Ctrl</kbd> + <kbd>t</kbd> |  N   |        | tabnew open the file in a new tab                                                                |
 | <kbd>R</kbd>                   |  N   |        | refresh refresh the tree                                                                         |
 | <kbd>a</kbd>                   |  N   |        | create add a file; leaving a trailing `/` will add a directory                                   |
 | <kbd>d</kbd>                   |  N   |        | remove delete a file (will prompt for confirmation)                                              |
-| <kbd>D</kbd>                   |  N   |        | trash trash a file via                                                                           | trash                                   | option  |
+| <kbd>D</kbd>                   |  N   |        | trash trash a file via                                                                           |
 | <kbd>r</kbd>                   |  N   |        | rename rename a file                                                                             |
 | <kbd>x</kbd>                   |  N   |        | cut add/remove file/directory to cut clipboard                                                   |
 | <kbd>c</kbd>                   |  N   |        | copy add/remove file/directory to copy clipboard                                                 |
@@ -154,7 +154,7 @@ Note that,
 | <kbd>Y</kbd>                   |  N   |        | copy_path copy relative path to system clipboard                                                 |
 | <kbd>g</kbd> + <kbd>y</kbd>    |  N   |        | copy_absolute_path copy absolute path to system clipboard                                        |
 | <kbd>W</kbd>                   |  N   |        | collapse_all collapse the whole tree                                                             |
-| <kbd>E</kbd>                   |  N   |        | expand_all expand the whole tree, stopping after expanding                                       | actions.expand_all.max_folder_discovery | folders |
+| <kbd>E</kbd>                   |  N   |        | expand_all expand the whole tree, stopping after expanding                                       |
 
 ### Terminal
 
