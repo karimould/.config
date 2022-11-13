@@ -2,6 +2,8 @@
 
 ## General
 
+Arrow keys are disabled.
+
 <details>
 <summary>Plugins</summary>
 <br>
