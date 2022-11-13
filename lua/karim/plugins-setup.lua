@@ -93,9 +93,6 @@ return packer.startup(function(use)
 	use({
 		"lewis6991/gitsigns.nvim",
 		commit = "9ff7dfb051e5104088ff80556203634fc8f8546d",
-		config = function()
-			require("gitsigns").setup()
-		end,
 	})
 
 	-- bufferline
@@ -122,6 +119,8 @@ return packer.startup(function(use)
 	-- undotree
 	use({ "mbbill/undotree", commit = "bd60cb564e3c3220b35293679669bb77af5f389d" })
 
+	-- live server
+	use({ "manzeloth/live-server", commit = "ecd7c1418823b65dd2bca710587c80afe42c973e" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

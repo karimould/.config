@@ -52,6 +52,7 @@
 - [vim-maximizer](https://github.com/szw/vim-maximizer)
 - [comment](https://github.com/numToStr/Comment.nvim)
 - [vim-surround](https://github.com/tpope/vim-surround)
+- [live server](https://github.com/manzeloth/live-server)
 </details>
 
 <details>
