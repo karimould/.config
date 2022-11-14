@@ -1,4 +1,3 @@
--- ToDo: Add protected call
 require("gitsigns").setup({
 	current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
 	on_attach = function(bufnr)
@@ -14,3 +13,5 @@ require("gitsigns").setup({
 		map("n", "<leader>gd", gs.diffthis)
 	end,
 })
+-- keybind for lazy git
+vim.keymap.set("n", "<leader>gg", ":LazyGit <CR>", {})

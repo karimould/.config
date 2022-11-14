@@ -55,6 +55,7 @@ Arrow keys are disabled.
 - [comment](https://github.com/numToStr/Comment.nvim)
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [live server](https://github.com/manzeloth/live-server)
+- [lazy git](https://github.com/kdheepak/lazygit.nvim)
 </details>
 
 <details>
@@ -103,6 +104,7 @@ Note that,
 | <kbd>Space</kbd> + <kbd>x</kbd> |  N   |        | close current tab |
 | <kbd>Space</kbd> + <kbd>n</kbd> |  N   |        | go to next tab    |
 | <kbd>Space</kbd> + <kbd>p</kbd> |  N   |        | go to prev tab    |
+| <kbd>tab</kbd>                  |  N   |        | circle next tab   |
 
 #### Buffer Managment
 
@@ -175,6 +177,7 @@ Note that,
 | ---------------------------------------------- | :--: | ------ | -------------------------------------------- |
 | <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>d</kbd> |  N   |        | ( Git Diff ) show git diff of current buffer |
 | <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>b</kbd> |  N   |        | ( Git Blame ) show git blame of current line |
+| <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>g</kbd> |  N   |        | open lazy git                                |
 
 ### Comment
 

@@ -94,6 +94,10 @@ return packer.startup(function(use)
 		"lewis6991/gitsigns.nvim",
 		commit = "9ff7dfb051e5104088ff80556203634fc8f8546d",
 	})
+	use({
+		"kdheepak/lazygit.nvim",
+		commit = "32bffdebe273e571588f25c8a708ca7297928617",
+	})
 
 	-- bufferline
 	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
