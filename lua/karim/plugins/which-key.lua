@@ -119,6 +119,9 @@ local mappings = {
 		x = { "<C-w>x", "Close current split window" },
 		m = { "<C-w>v", "Toggle split window maximization" },
 	},
+	h = {
+		name = "Hapoon",
+	},
 }
 
 which_key.setup(setup)

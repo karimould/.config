@@ -125,6 +125,10 @@ return packer.startup(function(use)
 
 	-- live server
 	use({ "manzeloth/live-server", commit = "ecd7c1418823b65dd2bca710587c80afe42c973e" })
+
+	-- harpoon
+	use({ "ThePrimeagen/harpoon", commit = "21d0d1bfa3000e4384740bfaefa0ebc51c773786" })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

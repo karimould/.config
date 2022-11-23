@@ -56,6 +56,7 @@ Arrow keys are disabled.
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [live server](https://github.com/manzeloth/live-server)
 - [lazy git](https://github.com/kdheepak/lazygit.nvim)
+- [harpoon](https://github.com/ThePrimeagen/harpoon)
 </details>
 
 <details>
@@ -210,5 +211,14 @@ Note that,
 | <kbd>Space</kbd> + <kbd>r</kbd> + <kbd>f</kbd> |  N   |        | rename file and update imports |
 | <kbd>Space</kbd> + <kbd>o</kbd> + <kbd>i</kbd> |  N   |        | organize imports               |
 | <kbd>Space</kbd> + <kbd>r</kbd> + <kbd>u</kbd> |  N   |        | remove unused variables        |
+
+### Harpoon
+
+| Key                                            | Mode | Action | Note                           |
+| ---------------------------------------------- | :--: | ------ | ------------------------------ |
+| <kbd>Space</kbd> + <kbd>h</kbd> + <kbd>a</kbd> |  N   |        | add current file to harpoon    |
+| <kbd>Space</kbd> + <kbd>h</kbd> + <kbd>u</kbd> |  N   |        | open harpoon ui                |
+| <kbd>Space</kbd> + <kbd>h</kbd> + <kbd>1</kbd> |  N   |        | jump to first file in harpoon  |
+| <kbd>Space</kbd> + <kbd>h</kbd> + <kbd>2</kbd> |  N   |        | jump to second file in harpoon |
 
 </details>
