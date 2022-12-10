@@ -83,3 +83,6 @@ keymap("v", "<Up>", "<Nop>", opts)
 keymap("v", "<Down>", "<Nop>", opts)
 keymap("v", "<Left>", "<Nop>", opts)
 keymap("v", "<Right>", "<Nop>", opts)
+
+-- ESC insert mode
+keymap("i", "jj", "<Esc>", opts)

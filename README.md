@@ -7,7 +7,9 @@ Arrow keys are disabled.
 <details>
 <summary>Plugins</summary>
 <br>
+
 **Plugin managment:**
+
 - [packer](https://github.com/wbthomason/packer.nvim)
 
 **Snippets:**
@@ -71,7 +73,7 @@ Arrow keys are disabled.
 Note that,
 
 - **Leader** key set as <kbd>Space</kbd>
-
+- you can exist insert mode with "jj"
 <details open>
   <summary>
     <strong>Key-mappings</strong>
