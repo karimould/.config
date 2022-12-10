@@ -84,5 +84,9 @@ keymap("v", "<Down>", "<Nop>", opts)
 keymap("v", "<Left>", "<Nop>", opts)
 keymap("v", "<Right>", "<Nop>", opts)
 
--- ESC insert mode
+-- Escape insert mode
 keymap("i", "jj", "<Esc>", opts)
+
+-- Center screen
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)

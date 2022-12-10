@@ -74,6 +74,7 @@ Note that,
 
 - **Leader** key set as <kbd>Space</kbd>
 - you can exist insert mode with "jj"
+
 <details open>
   <summary>
     <strong>Key-mappings</strong>
