@@ -1,47 +1,27 @@
 local status, bufferline = pcall(require, "bufferline")
 if not status then
+	print("Error in bufferline.lua")
 	return
 end
 
 bufferline.setup({
 	options = {
-		mode = "tabs",
-		separator_style = "slant",
-		always_show_bufferline = false,
+		mode = "buffer",
+		diagnostics = "nvim_lsp",
 		show_buffer_close_icons = false,
 		show_close_icon = false,
+		indicator = {
+			icon = "▎",
+		},
 		color_icons = true,
-		diagnostics_indicator = function(_, _, diagnostics_dict, context)
-			if context.buffer:current() then
-				return ""
-			end
-			local s = " "
-			for e, n in pairs(diagnostics_dict) do
-				local sym = e == "error" and " " or (e == "warning" and " " or "")
-				s = s .. n .. sym
-			end
-			return s
+		offsets = {
+			{ filetype = "NvimTree", text = "File Explorer", highlight = "Directory", padding = 1 },
+			{ filetype = "Outline", text = "Code Outline", highlight = "Directory", padding = 1 },
+		},
+		diagnostics_indicator = function(count, level, diagnostics_dict, context)
+			local icon = level:match("error") and " " or " "
+			return " " .. icon .. count
 		end,
-	},
-	highlights = {
-		separator = {
-			fg = "#073642",
-			bg = "#002b36",
-		},
-		separator_selected = {
-			fg = "#073642",
-		},
-		background = {
-			fg = "#657b83",
-			bg = "#002b36",
-		},
-		buffer_selected = {
-			fg = "#fdf6e3",
-			bold = true,
-		},
-		fill = {
-			bg = "#073642",
-		},
 	},
 })
 
