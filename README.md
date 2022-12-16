@@ -128,6 +128,7 @@ Note that,
 |<kbd>Space</kbd> + <kbd>f</kbd> + <kbd>s</kbd>| N | | ( Find String ) open live grep
 |<kbd>Space</kbd> + <kbd>f</kbd> + <kbd>h</kbd>| N | | ( Find help ) open find help tags
 |<kbd>Space</kbd> + <kbd>f</kbd> + <kbd>b</kbd>| N | | ( Find Branches ) open search all git branches
+|<kbd>Space</kbd> + <kbd>s</kbd> | N | | find and replace for word under cursor
 
 #### In Telescope
 
