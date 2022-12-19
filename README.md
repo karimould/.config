@@ -74,6 +74,7 @@ Note that,
 
 - **Leader** key set as <kbd>Space</kbd>
 - you can exist insert mode with "jj"
+- close current buffer with <kbd>Space</kbd> + <kbd>q</kbd>
 
 <details open>
   <summary>

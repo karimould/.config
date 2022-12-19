@@ -37,6 +37,9 @@ keymap("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
 keymap("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
 keymap("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
+-- Close buffer
+keymap("n", "<leader>q", ":enew<bar>bd #<CR>", opts)
+
 -- delete single character without copying into register
 keymap("n", "x", '"_x', opts)
 
