@@ -79,6 +79,10 @@ local opts = {
 }
 
 local mappings = {
+	b = {
+		name = "Buffer",
+		c = { ":bd<CR>:bnext<CR>", "Buffer Close" },
+	},
 	e = {
 		name = "Explorer",
 		e = { ":NvimTreeToggle<CR>", "Open File Tree" },

@@ -40,9 +40,13 @@ keymap("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 -- delete single character without copying into register
 keymap("n", "x", '"_x', opts)
 
+-- Buffer management
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Close / Hide / Unload buffer
+keymap("n", "<leader>bc", ":bd<CR>:bnext<CR>", opts)
 
 -- Visual --
 -- Stay in indent mode

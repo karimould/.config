@@ -112,12 +112,13 @@ Note that,
 
 #### Buffer Managment
 
-| Key                             | Mode | Action | Note                |
-| ------------------------------- | :--: | ------ | ------------------- |
-| <kbd>Cntrl</kbd> + <kbd>h</kbd> |  N   |        | go to left buffer   |
-| <kbd>Cntrl</kbd> + <kbd>j</kbd> |  N   |        | go to bottom buffer |
-| <kbd>Cntrl</kbd> + <kbd>k</kbd> |  N   |        | go to upper buffer  |
-| <kbd>Cntrl</kbd> + <kbd>l</kbd> |  N   |        | go to right buffer  |
+| Key                                            | Mode | Action | Note                   |
+| ---------------------------------------------- | :--: | ------ | ---------------------- |
+| <kbd>Cntrl</kbd> + <kbd>h</kbd>                |  N   |        | go to left buffer      |
+| <kbd>Cntrl</kbd> + <kbd>j</kbd>                |  N   |        | go to bottom buffer    |
+| <kbd>Cntrl</kbd> + <kbd>k</kbd>                |  N   |        | go to upper buffer     |
+| <kbd>Cntrl</kbd> + <kbd>l</kbd>                |  N   |        | go to right buffer     |
+| <kbd>Space</kbd> + <kbd>b</kbd> + <kbd>c</kbd> |  N   |        | buffer close (current) |
 
 ### Telescope / Search
 
