@@ -1,3 +1,7 @@
+# 
+node_modules/
+raycast
+.DS_STORE
 # Compiled Lua sources
 luac.out
 
