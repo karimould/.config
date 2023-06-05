@@ -11,10 +11,11 @@ return {
         bind_to_cwd = false,
         follow_current_file = true,
         filtered_items = {
-            visible = true
-        }
+          visible = true,
+        },
       },
       window = {
+        position = "right",
         mappings = {
           ["<space>"] = "none",
         },
