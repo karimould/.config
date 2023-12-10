@@ -57,31 +57,18 @@ Custom keymaps
 
 ### File Tree
 
-| Key                                            | Mode | Action | Note                               |
-| ---------------------------------------------- | :--: | ------ | ---------------------------------- |
-| <kbd>Space</kbd> + <kbd>e</kbd> + <kbd>e</kbd> |  N   |        | toggle file explorer               |
-| <kbd>Space</kbd> + <kbd>e</kbd> + <kbd>f</kbd> |  N   |        | find current file in file explorer |
-| <kbd>?</kbd>                                   |  N   |        | toggle CheatSheet in neoTree       |
-
-### Terminal
-
-| Key                                            | Mode | Action | Note                       |
-| ---------------------------------------------- | :--: | ------ | -------------------------- |
-| <kbd>Space</kbd> + <kbd>T</kbd> + <kbd>f</kbd> |  N   |        | toggle floating terminal   |
-| <kbd>Space</kbd> + <kbd>T</kbd> + <kbd>h</kbd> |  N   |        | toggle horizontal terminal |
-| <kbd>Space</kbd> + <kbd>T</kbd> + <kbd>v</kbd> |  N   |        | toggle vertical terminal   |
-| <kbd>Space</kbd> + <kbd>T</kbd> + <kbd>n</kbd> |  N   |        | toggle node terminal       |
-| <kbd>Space</kbd> + <kbd>T</kbd> + <kbd>p</kbd> |  N   |        | toggle python terminal     |
+| Key                                            | Mode | Action | Note                 |
+| ---------------------------------------------- | :--: | ------ | -------------------- |
+| <kbd>Space</kbd> + <kbd>e</kbd> + <kbd>e</kbd> |  N   |        | toggle file explorer |
 
 ### Git
 
 | Key                                            | Mode | Action | Note                                         |
 | ---------------------------------------------- | :--: | ------ | -------------------------------------------- |
-| <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>d</kbd> |  N   |        | ( Git Diff ) show git diff of current buffer |
 | <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>b</kbd> |  N   |        | ( Git Blame ) show git blame of current line |
 | <kbd>Space</kbd> + <kbd>g</kbd> + <kbd>g</kbd> |  N   |        | open lazy git                                |
 
-### Comment
+### Comment (Currently not in config)
 
 | Key                                                       | Mode | Action | Note                 |
 | --------------------------------------------------------- | :--: | ------ | -------------------- |

@@ -24,11 +24,11 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
+opt.scrolloff = 10
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
@@ -46,3 +46,12 @@ opt.iskeyword:append("-") -- consider string-string as whole word
 -- search
 -- opt.hlsearch = false
 opt.incsearch = true
+
+-- for transparent bg
+opt.winblend = 0
+opt.pumblend = 0
+
+opt.pumblend = 15
+
+opt.scrolloff = 8 -- scroll page when cursor is 8 lines from top/bottom
+opt.sidescrolloff = 8 -- scroll page when cursor is 8 spaces from left/right

@@ -22,6 +22,8 @@ return {
 		top = 0,
 		bottom = 0,
 	},
+	window_background_opacity = 0.9,
+	macos_window_background_blur = 15,
 	-- leader = { key = 'Space', mods = 'SHIFT', timeout_milliseconds = 1000 },
 	keys = {
 		{ key = "d", mods = "SUPER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },

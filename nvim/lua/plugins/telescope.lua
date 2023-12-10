@@ -1,52 +1,67 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     keys = {
-      -- change a keymap
-      -- add a keymap to browse plugin files
-      {
-        "<leader>fs",
-        function()
-          require("telescope.builtin").live_grep({ cwd = require("lazy.core.config").options.root })
-        end,
-        desc = "Find String",
-      },
+      { "<Leader>ff", "<CMD>Telescope find_files<CR>", desc = "Find files" },
+      { "<Leader>fg", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
+      { "<Leader>fs", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
+      { "<Leader>sg", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
+      { "<Leader>fb", "<CMD>Telescope buffers<CR>", desc = "Find Buffers" },
+      { "<Leader>ft", "<CMD>Telescope treesitter<CR>", desc = "Find Treesitter symbols" }, -- Requires `treesitter`.
+      { "<Leader>fh", "<CMD>Telescope help_tags<CR>", desc = "Find Help tags" },
+      { "<Leader>fc", "<CMD>Telescope commands<CR>", desc = "Find Commands" },
+      { "<Leader>fm", "<CMD>Telescope marks<CR>", desc = "Find Marks" },
+      { "<Leader>fr", "<CMD>Telescope resume<CR>", desc = "Resume last search" },
     },
-    -- change some options
-    opts = {
-      --   defaults = {
-      --     layout_strategy = "horizontal",
-      --     layout_config = { prompt_position = "top" },
-      --     sorting_strategy = "ascending",
-      --     winblend = 0,
-      --   },
-      -- add some mappings
-      defaults = {
-        file_ignore_patterns = {
-          "node_modules",
-        },
-        mappings = {
-          i = {
-            ["<C-j>"] = function(...)
-              return require("telescope.actions").move_selection_next(...)
-            end,
-            ["<C-k>"] = function(...)
-              return require("telescope.actions").move_selection_previous(...)
-            end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-fzf-native.nvim",
+      "tsakirist/telescope-lazy.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("telescope").setup({
+        defaults = {
+          mappings = {
+            i = {
+              ["<Esc>"] = require("telescope.actions").close, -- don't go into normal mode, just close
+              ["<C-j>"] = require("telescope.actions").move_selection_next, -- scroll the list with <c-j>
+              ["<C-k>"] = require("telescope.actions").move_selection_previous, -- scroll the list with <c-k>
+            },
           },
         },
-      },
+        extensions = {
+          fzf = {
+            fuzzy = true,
+            override_generic_sorter = true,
+            ovveride_file_sorter = true,
+            case_mode = "smart_case",
+          },
+          repo = {
+            list = {
+              file_ignore_patterns = { "/%.cache/", "/%.cargo/", "/share/", "/node_modules/" },
+            },
+          },
+        },
+      })
+      require("telescope").load_extension("fzf") -- telescope-fzf-native.nvim
+      require("telescope").load_extension("lazy") -- telescope-lazy.nvim
+    end,
+  },
+  -- Fuzzy finder for `telescope.nvim`.
+  -- Requires `make` installed.
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    lazy = true,
+    build = "make",
+  },
+  -- Telescope plugins installed by `lazy.nvim`.
+  {
+    "tsakirist/telescope-lazy.nvim",
+    keys = { { "<Leader>fl", "<CMD>Telescope lazy<CR>", desc = "Lazy plugins" } },
+    dependencies = {
+      "folke/lazy.nvim",
     },
   },
-  -- add telescope-fzf-native
-  -- {
-  --   "telescope.nvim",
-  --   dependencies = {
-  --     "nvim-telescope/telescope-fzf-native.nvim",
-  --     build = "make",
-  --     config = function()
-  --       require("telescope").load_extension("fzf")
-  --     end,
-  --   },
-  -- },
 }
