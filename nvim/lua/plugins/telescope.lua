@@ -7,7 +7,7 @@ return {
       { "<Leader>fg", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
       { "<Leader>fs", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
       { "<Leader>sg", "<CMD>Telescope live_grep<CR>", desc = "Find Live grep" }, -- Requires `ripgrep` to be installed.
-      { "<Leader>fb", "<CMD>Telescope buffers<CR>", desc = "Find Buffers" },
+      -- { "<Leader>fb", "<CMD>Telescope buffers<CR>", desc = "Find Buffers" },
       { "<Leader>ft", "<CMD>Telescope treesitter<CR>", desc = "Find Treesitter symbols" }, -- Requires `treesitter`.
       { "<Leader>fh", "<CMD>Telescope help_tags<CR>", desc = "Find Help tags" },
       { "<Leader>fc", "<CMD>Telescope commands<CR>", desc = "Find Commands" },
