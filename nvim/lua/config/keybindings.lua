@@ -85,6 +85,8 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 
 -- UI
 keymap("n", "<leader>uR", ":set relativenumber!<CR> :set linenumber!<CR>", { desc = "Toggle relative line numbers" })
+keymap("n", "<leader>uS", ":set spell!<CR>", { desc = "Toggle spell check" })
+-- File explorer
 keymap("n", "<leader>ee", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
 
 local map = vim.keymap.set
@@ -96,3 +98,6 @@ map("n", "k", "gk") -- move vert by visual line
 map({ "n", "v" }, "H", "0^") -- "beginning of line"
 map({ "n", "v" }, "L", "$") --"end of line" ,
 map({ "n", "v" }, "M", "gm") --"middle of line" ,
+
+-- Codeium
+keymap("n", "<leader>at", ":CodeiumToggle", { desc = "Toggle Codeium" })
