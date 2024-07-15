@@ -1,9 +1,12 @@
 # 
 node_modules/
-raycast
+yarn
 .DS_STORE
 # Compiled Lua sources
 luac.out
+filezilla
+
+shopify
 
 # luarocks build files
 *.src.rock
