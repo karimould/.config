@@ -1,0 +1,17 @@
+theme = rose-pine
+background = #000000
+background-opacity = 0.75
+background-blur-radius = 20
+
+font-family = JetBrainsMonoNL Nerd Font 
+font-size = 16
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor 
+
+macos-titlebar-style = hidden
+
+window-decoration = true
+
+auto-update = check
+

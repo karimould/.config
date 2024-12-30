@@ -3,5 +3,5 @@ return {
   config = true,
   event = "VeryLazy",
   opts = {},
-  keys = { { "<leader>gb", "<cmd>ToggleBlame<cr>", desc = "Toggle git blame" } },
+  keys = { { "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Toggle git blame" } },
 }
