@@ -1,23 +1,36 @@
 return {
-  "2nthony/vitesse.nvim",
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
+  "JunaidQrysh/chameleon.nvim",
+  dependencies = { "nvzone/volt" },
+  event = "VeryLazy",
   config = function()
-    -- load the colorscheme here
-    require("vitesse").setup({
-      transparent_background = true,
-      transparent_float_background = true,
-      reverse_visual = true,
-      dim_nc = true,
-      cmp_cmdline_disable_search_highlight_group = true,
-      diagnostic_virtual_text_background = true,
-    })
-    vim.cmd("colorscheme vitesse")
+    vim.keymap.set("n", "<leader>ut", function()
+      require("tswitch").open()
+    end, { desc = "Theme Switcher" })
+    vim.keymap.set("n", "<leader>uT", function()
+      require("base46").toggle_transparency()
+    end, { desc = "Toggle Transparency" })
   end,
-  dependencies = {
-    "tjdevries/colorbuddy.nvim",
-  },
 }
+-- return {
+--   "2nthony/vitesse.nvim",
+--   lazy = false, -- make sure we load this during startup if it is your main colorscheme
+--   priority = 1000, -- make sure to load this before all the other start plugins
+--   config = function()
+--     -- load the colorscheme here
+--     require("vitesse").setup({
+--       transparent_background = true,
+--       transparent_float_background = true,
+--       reverse_visual = true,
+--       dim_nc = true,
+--       cmp_cmdline_disable_search_highlight_group = true,
+--       diagnostic_virtual_text_background = true,
+--     })
+--     vim.cmd("colorscheme vitesse")
+--   end,
+--   dependencies = {
+--     "tjdevries/colorbuddy.nvim",
+--   },
+-- }
 
 -- return {
 --   "catppuccin/nvim",
