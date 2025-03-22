@@ -137,6 +137,7 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = { -- custom settings for lua
+
         Lua = {
           -- make the language server recognize "vim" global
           diagnostics = {
@@ -151,6 +152,12 @@ return {
           },
         },
       },
+    })
+
+    -- configure go language server
+    lspconfig["gopls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
   end,
 }

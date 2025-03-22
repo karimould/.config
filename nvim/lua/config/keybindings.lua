@@ -99,3 +99,7 @@ map({ "n", "v" }, "M", "gm") --"middle of line" ,
 
 -- Codeium
 keymap("n", "<leader>at", ":CodeiumToggle", { desc = "Toggle Codeium" })
+
+-- vim.keymap.set("n", "<leader>i", function()
+--   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ 0 }), { 0 })
+-- end, { desc = "Toggle inline hints" })
