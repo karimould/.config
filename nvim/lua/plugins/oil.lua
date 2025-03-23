@@ -1,3 +1,4 @@
+local detail = false
 return {
   {
     "stevearc/oil.nvim",
@@ -13,6 +14,17 @@ return {
       require("oil").setup({
         columns = { "icon" },
         keymaps = {
+          ["gd"] = {
+            desc = "Toggle file detail view",
+            callback = function()
+              detail = not detail
+              if detail then
+                require("oil").set_columns({ "icon", "permissions", "size", "mtime" })
+              else
+                require("oil").set_columns({ "icon" })
+              end
+            end,
+          },
           ["<C-h>"] = false,
           ["<C-l>"] = false,
           ["<C-k>"] = false,
