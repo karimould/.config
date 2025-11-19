@@ -35,14 +35,14 @@ return {
       require("opencode").toggle()
     end, { desc = "Opencode Toggle" })
 
-    -- Half page up
-    vim.keymap.set("n", "<leader>au", function()
-      require("opencode").command("session.half.page.up")
-    end, { desc = "Opencode Half Page Up" })
-
-    -- Half page down
-    vim.keymap.set("n", "<leader>adn", function()
-      require("opencode").command("session.half.page.down")
-    end, { desc = "Opencode Half Page Down" })
+    -- -- Half page up
+    -- vim.keymap.set("n", "<leader>au", function()
+    --   require("opencode").command("session.half.page.up")
+    -- end, { desc = "Opencode Half Page Up" })
+    --
+    -- -- Half page down
+    -- vim.keymap.set("n", "<leader>adn", function()
+    --   require("opencode").command("session.half.page.down")
+    -- end, { desc = "Opencode Half Page Down" })
   end,
 }
