@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -eu
+
+CONFIG="$HOME/.config/neomutt/accounts.local"
+
+# Extract a value from accounts.local without sourcing it
+# (sourcing would clobber the script's positional parameters).
+get() {
+    sed -n "s/^set[[:space:]]*$1[[:space:]]*=[[:space:]]*\"\(.*\)\"/\1/p" "$CONFIG"
+}
+
+HOST=""
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --hostname)
+            HOST="$2"
+            shift 2
+            ;;
+        --username|--type)
+            shift 2
+            ;;
+        *)
+            shift
+            ;;
+    esac
+done
+
+case "$HOST" in
+    imap.gmail.com|smtp.gmail.com)
+        printf 'username: %s\n' "$(get my_gmail)"
+        printf 'password: %s\n' "$(pass show mail/gmail | head -n 1)"
+        ;;
+
+    imap.mail.me.com|smtp.mail.me.com)
+        printf 'username: %s\n' "$(get my_icloud)"
+        printf 'password: %s\n' "$(pass show mail/icloud | head -n 1)"
+        ;;
+
+    *)
+        printf 'Unknown mail server: %s\n' "$HOST" >&2
+        exit 1
+        ;;
+esac

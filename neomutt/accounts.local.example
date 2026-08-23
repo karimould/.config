@@ -1,0 +1,11 @@
+# accounts.local — template
+# Copy this file to neomutt/accounts.local and fill in your real
+# addresses. The local file is gitignored and never committed.
+#
+#   cp neomutt/accounts.local.example neomutt/accounts.local
+
+# Gmail
+set my_gmail = "your.address@gmail.com"
+
+# iCloud
+set my_icloud = "your.address@icloud.com"

@@ -1,0 +1,11 @@
+# Private identity data — never commit
+neomutt/accounts.local
+
+# Secrets / auth data — never commit
+anil-shop/
+configstore/
+github-copilot/
+opencode/service.json
+opencode/opencode.jsonc
+opencode/node_modules/
+.DS_Store

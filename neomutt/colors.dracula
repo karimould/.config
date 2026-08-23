@@ -1,0 +1,177 @@
+# Dracula theme for NeoMutt
+#
+# Dracula palette:
+# background  #282A36
+# current     #44475A
+# foreground  #F8F8F2
+# comment     #6272A4
+# cyan        #8BE9FD
+# green       #50FA7B
+# orange      #FFB86C
+# pink        #FF79C6
+# purple      #BD93F9
+# red         #FF5555
+# yellow      #F1FA8C
+
+
+# ─────────────────────────────────────────────────────────────
+# Enable true colour
+# ─────────────────────────────────────────────────────────────
+
+set color_directcolor = yes
+
+
+# ─────────────────────────────────────────────────────────────
+# General UI
+# ─────────────────────────────────────────────────────────────
+
+color normal      "#F8F8F2" "#282A36"
+color error       "#FF5555" "#282A36"
+color warning     "#FFB86C" "#282A36"
+color message     "#8BE9FD" "#282A36"
+
+color prompt      "#BD93F9" "#282A36"
+color options     "#50FA7B" "#282A36"
+
+color indicator   "#F8F8F2" "#44475A"
+
+color search      "#282A36" "#F1FA8C"
+
+color markers     "#6272A4" "#282A36"
+color progress    "#F8F8F2" "#44475A"
+
+color tilde       "#6272A4" "#282A36"
+
+color bold        bold "#F8F8F2" "#282A36"
+color italic      italic "#F1FA8C" "#282A36"
+color underline   underline "#8BE9FD" "#282A36"
+
+
+# ─────────────────────────────────────────────────────────────
+# Status bar
+# ─────────────────────────────────────────────────────────────
+
+color status      "#282A36" "#BD93F9"
+
+
+# ─────────────────────────────────────────────────────────────
+# Sidebar
+# ─────────────────────────────────────────────────────────────
+
+color sidebar_background "#F8F8F2" "#282A36"
+
+color sidebar_divider    "#6272A4" "#282A36"
+
+color sidebar_ordinary   "#F8F8F2" "#282A36"
+
+color sidebar_highlight  "#F8F8F2" "#44475A"
+
+color sidebar_indicator  "#282A36" "#BD93F9"
+
+color sidebar_new        "#50FA7B" "#282A36"
+
+color sidebar_unread     "#8BE9FD" "#282A36"
+
+color sidebar_flagged    "#FFB86C" "#282A36"
+
+color sidebar_spool_file "#FF79C6" "#282A36"
+
+
+# ─────────────────────────────────────────────────────────────
+# Index
+# ─────────────────────────────────────────────────────────────
+
+# Default
+color index "#F8F8F2" "#282A36" "~A"
+
+# Unread
+color index "#8BE9FD" "#282A36" "~U"
+
+# New
+color index bold "#50FA7B" "#282A36" "~N"
+
+# Flagged
+color index bold "#FFB86C" "#282A36" "~F"
+
+# Deleted
+color index "#6272A4" "#282A36" "~D"
+
+# Tagged
+color index "#BD93F9" "#282A36" "~T"
+
+
+# ─────────────────────────────────────────────────────────────
+# Index fields
+# ─────────────────────────────────────────────────────────────
+
+color index_number  "#6272A4" "#282A36" "~A"
+color index_date    "#6272A4" "#282A36" "~A"
+color index_author  "#8BE9FD" "#282A36" "~A"
+color index_subject "#F8F8F2" "#282A36" "~A"
+color index_size    "#6272A4" "#282A36" "~A"
+color index_flags   "#FF79C6" "#282A36" "~A"
+
+# Unread subjects
+color index_subject bold "#F8F8F2" "#282A36" "~U"
+
+# Flagged subjects
+color index_subject bold "#FFB86C" "#282A36" "~F"
+
+
+# ─────────────────────────────────────────────────────────────
+# Thread tree
+# ─────────────────────────────────────────────────────────────
+
+color tree "#6272A4" "#282A36"
+
+
+# ─────────────────────────────────────────────────────────────
+# Message headers
+# ─────────────────────────────────────────────────────────────
+
+color hdrdefault "#6272A4" "#282A36"
+
+color header "#FF79C6" "#282A36" "^From:"
+color header "#8BE9FD" "#282A36" "^To:"
+color header "#8BE9FD" "#282A36" "^Cc:"
+color header "#BD93F9" "#282A36" "^Subject:"
+color header "#6272A4" "#282A36" "^Date:"
+
+
+# ─────────────────────────────────────────────────────────────
+# Message body
+# ─────────────────────────────────────────────────────────────
+
+color body "#8BE9FD" "#282A36" "(https?|ftp)://[^ >\"]*"
+
+color body "#FF79C6" "#282A36" \
+    "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+
+color signature "#6272A4" "#282A36"
+
+color attachment "#F1FA8C" "#282A36"
+
+
+# ─────────────────────────────────────────────────────────────
+# Quoted replies
+# ─────────────────────────────────────────────────────────────
+
+color quoted0 "#6272A4" "#282A36"
+color quoted1 "#8BE9FD" "#282A36"
+color quoted2 "#50FA7B" "#282A36"
+color quoted3 "#F1FA8C" "#282A36"
+color quoted4 "#FFB86C" "#282A36"
+color quoted5 "#FF79C6" "#282A36"
+color quoted6 "#BD93F9" "#282A36"
+
+
+# ─────────────────────────────────────────────────────────────
+# Compose screen
+# ─────────────────────────────────────────────────────────────
+
+color compose_header "#BD93F9" "#282A36"
+
+color compose_security_none    "#FF5555" "#282A36"
+color compose_security_sign    "#F1FA8C" "#282A36"
+color compose_security_encrypt "#50FA7B" "#282A36"
+color compose_security_both    "#8BE9FD" "#282A36"

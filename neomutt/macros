@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────────
+# Macros
+# ─────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────
+# Folder jump macros
+# Open special folders on demand instead of polling them
+# in the sidebar. Works in index and pager.
+# ─────────────────────────────────────────────────────────────
+
+# Gmail
+macro index,pager ,gd \
+    "<change-folder>imaps://imap.gmail.com/[Gmail]/Drafts<Enter>" \
+    "Open Gmail Drafts"
+
+macro index,pager ,gs \
+    "<change-folder>imaps://imap.gmail.com/[Gmail]/Spam<Enter>" \
+    "Open Gmail Spam"
+
+macro index,pager ,gi \
+    "<change-folder>imaps://imap.gmail.com/INBOX<Enter>" \
+    "Open Gmail Inbox"
+
+# iCloud
+macro index,pager ,id \
+    "<change-folder>imaps://imap.mail.me.com/Drafts<Enter>" \
+    "Open iCloud Drafts"
+
+macro index,pager ,ij \
+    "<change-folder>imaps://imap.mail.me.com/Junk<Enter>" \
+    "Open iCloud Junk"
+
+macro index,pager ,ii \
+    "<change-folder>imaps://imap.mail.me.com/INBOX<Enter>" \
+    "Open iCloud Inbox"
+
+macro index,pager ,im \
+    "<change-folder>imaps://imap.mail.me.com/Sent Messages<Enter>" \
+    "Open iCloud Sent Messages"
+
+# Back to the INBOX of whichever account you're on
+macro index,pager ,b \
+    "<change-folder>!<Enter>" \
+    "Back to current INBOX"

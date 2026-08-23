@@ -1,0 +1,181 @@
+# ─────────────────────────────────────────────────────────────
+# Identity
+# ─────────────────────────────────────────────────────────────
+
+set real_name = "Karim Ould Mahieddine"
+
+# Private email addresses live in accounts.local (gitignored).
+# Copy accounts.local.example to accounts.local and fill it in.
+source ~/.config/neomutt/accounts.local
+
+alternates "^$my_gmail$" "^$my_icloud$"
+
+
+# ─────────────────────────────────────────────────────────────
+# Editor
+# ─────────────────────────────────────────────────────────────
+
+set editor = "nvim"
+
+
+# ─────────────────────────────────────────────────────────────
+# Sidebar
+# ─────────────────────────────────────────────────────────────
+
+set sidebar_visible = yes
+set sidebar_width = 24
+set sidebar_sort = unsorted
+
+
+# ─────────────────────────────────────────────────────────────
+# Index
+# ─────────────────────────────────────────────────────────────
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+
+set date_format = "%d.%m.%Y"
+
+set index_format = "%2C %Z %?X?A& ? %-25.25L %[%d.%m.%Y %H:%M] %-40.40s %> %5c"
+
+# Flag characters, in order:
+# tagged * | flagged ! | deleted D | del-attach d | replied r |
+# old O | NEW ● | old-thread o | new-thread n | read - | read(%Z) ␣
+set flag_chars = "*!DdrO●on- "
+
+
+# ─────────────────────────────────────────────────────────────
+# Cache
+# ─────────────────────────────────────────────────────────────
+
+set header_cache = "~/.cache/neomutt/headers"
+set message_cachedir = "~/.cache/neomutt/bodies"
+
+
+# ─────────────────────────────────────────────────────────────
+# Pager
+# ─────────────────────────────────────────────────────────────
+
+set pager_context = 3
+set pager_index_lines = 8
+set pager_stop = yes
+
+set smart_wrap = yes
+set markers = no
+
+set quote_regex = "^([ \t]*[|>:}#])+"
+
+unset mark_old
+
+
+# ─────────────────────────────────────────────────────────────
+# Compose / reply
+# ─────────────────────────────────────────────────────────────
+
+set fast_reply = yes
+set include = yes
+set reply_to = yes
+set edit_headers = yes
+
+
+# ─────────────────────────────────────────────────────────────
+# Behaviour
+# ─────────────────────────────────────────────────────────────
+
+set quit = ask-yes
+set delete = ask-yes
+set wait_key = no
+set sleep_time = 0
+
+
+# ─────────────────────────────────────────────────────────────
+# IMAP performance
+# ─────────────────────────────────────────────────────────────
+
+# Don't monitor every subscribed remote folder
+unset imap_check_subscribed
+
+# Show all folders when browsing IMAP
+unset imap_list_subscribed
+
+# Avoid expensive statistics queries on every remote mailbox
+unset mail_check_stats
+
+set mail_check = 90
+set timeout = 15
+set imap_keep_alive = 300
+
+
+# ─────────────────────────────────────────────────────────────
+# TLS
+# ─────────────────────────────────────────────────────────────
+
+set ssl_force_tls = yes
+
+
+# ─────────────────────────────────────────────────────────────
+# Credentials
+# ─────────────────────────────────────────────────────────────
+
+set account_command = "~/.config/neomutt/account-command"
+
+
+# ─────────────────────────────────────────────────────────────
+# Default account — iCloud
+# Opened at startup; the folder-hook re-applies these
+# whenever an iCloud mailbox is entered
+# ─────────────────────────────────────────────────────────────
+
+set folder = "imaps://imap.mail.me.com/"
+set spoolfile = "+INBOX"
+
+set from = "$my_icloud"
+set smtp_url = "smtp://smtp.mail.me.com:587/"
+
+
+# ─────────────────────────────────────────────────────────────
+# Gmail account
+# ─────────────────────────────────────────────────────────────
+
+folder-hook "imaps://imap.gmail.com/" \
+    "set folder='imaps://imap.gmail.com/'; \
+     set spoolfile='+INBOX'; \
+     set from='$my_gmail'; \
+     set smtp_url='smtps://smtp.gmail.com:465/'; \
+     set copy=no; \
+     unset record; \
+     set postponed='+[Gmail]/Drafts'; \
+     unset trash"
+
+
+# ─────────────────────────────────────────────────────────────
+# iCloud account
+# ─────────────────────────────────────────────────────────────
+
+folder-hook "imaps://imap.mail.me.com/" \
+    "set folder='imaps://imap.mail.me.com/'; \
+     set spoolfile='+INBOX'; \
+     set from='$my_icloud'; \
+     set smtp_url='smtp://smtp.mail.me.com:587/'; \
+     set copy=yes; \
+     set postponed='+Drafts'; \
+     set record='+Sent Messages'; \
+     set trash='+Deleted Messages'"
+
+
+# ─────────────────────────────────────────────────────────────
+# Accounts shown in sidebar
+# ─────────────────────────────────────────────────────────────
+
+named-mailboxes \
+    "Gmail"  "imaps://imap.gmail.com/INBOX" \
+    "iCloud" "imaps://imap.mail.me.com/INBOX"
+
+
+# ─────────────────────────────────────────────────────────────
+# Key bindings, macros and theme
+# ─────────────────────────────────────────────────────────────
+
+source ~/.config/neomutt/keys
+source ~/.config/neomutt/macros
+source ~/.config/neomutt/colors.dracula

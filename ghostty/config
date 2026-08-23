@@ -1,0 +1,21 @@
+term = xterm-256color
+theme = stardust
+
+macos-icon = xray
+macos-titlebar-style = tabs
+
+font-family = "FiraMono Nerd Font"
+font-thicken = true
+font-size = 20
+
+mouse-hide-while-typing = true
+
+window-decoration = true
+window-save-state = always
+
+background = 000000
+background-opacity = 0.2
+background-blur-radius = 20
+
+# keybinds
+keybind = shift+enter=text:\n

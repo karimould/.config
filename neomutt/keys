@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────
+# Key bindings
+# ─────────────────────────────────────────────────────────────
+
+# Sidebar
+bind index,pager \Cj sidebar-next
+bind index,pager \Ck sidebar-prev
+bind index,pager \Co sidebar-open
+
+# Free the g/G prefixes for multi-key sequences below,
+# and move their original functions to new keys:
+#   group-reply : Esc+g   (was g)
+#   fetch mail  : ,f      (was G)
+bind index g noop
+bind index G noop
+
+bind index \eg group-reply
+bind index ,f imap-fetch-mail
+
+# Vim-style navigation
+bind index gg first-entry
+bind index GG bottom-page
+
+# Half-page scrolling like vim's Ctrl-d / Ctrl-u
+bind index,pager \Cd half-down
+bind index,pager \Cu half-up
+
+# Pager: free 'g' prefix (group-reply moves to Esc+g),
+# then jump to top/bottom of the open message vim-style
+bind pager g noop
+bind pager \eg group-reply
+bind pager gg top
+bind pager G bottom
