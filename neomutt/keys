@@ -17,6 +17,9 @@ bind index G noop
 bind index \eg group-reply
 bind index ,f imap-fetch-mail
 
+# Fetch new mail for the current account
+bind index,pager F imap-fetch-mail
+
 # Vim-style navigation
 bind index gg first-entry
 bind index GG bottom-page

@@ -9,7 +9,7 @@ symlink**.
 
 | Directory        | Used by  | Needs a symlink?                                  |
 | ---------------- | -------- | ------------------------------------------------- |
-| `scripts/`       | you 🙂   | No — run `bootstrap-macos.sh` / `bootstrap-linux.sh` |
+| `scripts/`       | me       | No — run `bootstrap-macos.sh` / `bootstrap-linux.sh` |
 | `zsh/`           | zsh      | **Yes** — `~/.zshrc` → `zsh/.zshrc`               |
 | `neomutt/`       | NeoMutt  | No — read from `~/.config/neomutt` directly       |
 | `nvim/`          | Neovim   | No — XDG default                                  |

@@ -87,6 +87,9 @@ set delete = ask-yes
 set wait_key = no
 set sleep_time = 0
 
+# Save attachments to ~/Downloads (default would be the launch directory)
+set attach_save_dir = "~/Downloads/"
+
 
 # ─────────────────────────────────────────────────────────────
 # IMAP performance
@@ -112,6 +115,11 @@ set imap_keep_alive = 300
 
 set ssl_force_tls = yes
 
+# Homebrew's SASL library lacks PLAIN/LOGIN plugins, which breaks SMTP
+# auth against iCloud/Gmail ("No authenticators available").
+# 'plain' is built into NeoMutt itself.
+set smtp_authenticators = "plain"
+
 
 # ─────────────────────────────────────────────────────────────
 # Credentials
@@ -130,7 +138,8 @@ set folder = "imaps://imap.mail.me.com/"
 set spoolfile = "+INBOX"
 
 set from = "$my_icloud"
-set smtp_url = "smtp://smtp.mail.me.com:587/"
+# Username embedded so SMTP authenticates as the mailbox owner
+set smtp_url = "smtp://$my_icloud@smtp.mail.me.com:587/"
 
 
 # ─────────────────────────────────────────────────────────────
@@ -140,8 +149,8 @@ set smtp_url = "smtp://smtp.mail.me.com:587/"
 folder-hook "imaps://imap.gmail.com/" \
     "set folder='imaps://imap.gmail.com/'; \
      set spoolfile='+INBOX'; \
-     set from='$my_gmail'; \
-     set smtp_url='smtps://smtp.gmail.com:465/'; \
+     set from=\"$my_gmail\"; \
+     set smtp_url=\"smtps://$my_gmail@smtp.gmail.com:465/\"; \
      set copy=no; \
      unset record; \
      set postponed='+[Gmail]/Drafts'; \
@@ -155,8 +164,8 @@ folder-hook "imaps://imap.gmail.com/" \
 folder-hook "imaps://imap.mail.me.com/" \
     "set folder='imaps://imap.mail.me.com/'; \
      set spoolfile='+INBOX'; \
-     set from='$my_icloud'; \
-     set smtp_url='smtp://smtp.mail.me.com:587/'; \
+     set from=\"$my_icloud\"; \
+     set smtp_url=\"smtp://$my_icloud@smtp.mail.me.com:587/\"; \
      set copy=yes; \
      set postponed='+Drafts'; \
      set record='+Sent Messages'; \
